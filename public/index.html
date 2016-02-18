@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/assets/css/animate.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
+
+</head>
+<body>
+
+<div id="main-content" ng-if="isLogged">
+    <div ng-include="'views/partials/navbar.html'"></div>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div ng-include="'views/partials/nav-top.html'"></div>
+        <div ui-view></div>
+    </div>
+</div>
+
+<div id="login-content" ng-if="!isLogged">
+    <div ui-view></div>
+</div>
+
+</body>
+<!-- Mainly scripts -->
+<script src="/assets/js/jquery/jquery-2.1.1.min.js"></script>
+<script src="/assets/js/bootstrap/bootstrap.min.js"></script>
+<script src="/assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="/assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="/assets/js/inspinia.js"></script>
+<script src="/assets/js/plugins/pace/pace.min.js"></script>
+
+<!-- iCheck -->
+<script src="/assets/js/plugins/iCheck/icheck.min.js"></script>
+
+</html>
